@@ -1,0 +1,61 @@
+body{
+	width: 1000px;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: #393939;
+}
+h1, h2, h3, h4, h5, p{
+	color: #297cac;
+}
+
+.music{
+	text-align: center;
+	width: 800px;
+	height: 20px;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: rgba(0,200,0,0.5);
+}
+.music button{
+	border: 1px solid #00aaff;
+	width: 200px;
+	height: 20px;
+	color: #00aa00;
+	background-color: rgba(0,0,0,0);
+}
+
+.title{
+	text-align: center;
+	width: 800px;
+	height: 400px;
+	margin-top: 20px;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: rgba(62,78,78,0.5);
+}
+#title{
+	width: 400px;
+	float: left;
+	margin-right: auto;
+	margin-left: auto;
+}
+#credit{
+	width: 400px;
+	float: left;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 100px;
+}
+
+.sbgame{
+	width: 800px;
+	margin-top: 20px;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: rgba(62,78,78,0.5);
+	
+}
+#sbgame{
+	margin-left: 80px;
+	text-align: left;
+}
