@@ -7,6 +7,10 @@ body{
 h1, h2, h3, h4, h5, p{
 	color: #297cac;
 }
+a:link, :visited, :hover ,:active{
+	color:#0044aa;
+	text-decoration: none;
+}
 
 .music{
 	text-align: center;
@@ -14,14 +18,20 @@ h1, h2, h3, h4, h5, p{
 	height: 20px;
 	margin-right: auto;
 	margin-left: auto;
-	background-color: rgba(0,200,0,0.5);
+	background-color: rgba(62,78,78,0.5);
 }
 .music button{
+	float: left;
 	border: 1px solid #00aaff;
 	width: 200px;
 	height: 20px;
-	color: #00aa00;
+	color: rgba(0,0,200,0.5);
 	background-color: rgba(0,0,0,0);
+}
+.music div{
+	float: left;
+	width: 600px;
+	color: #00aaff;
 }
 
 .title{
@@ -53,9 +63,20 @@ h1, h2, h3, h4, h5, p{
 	margin-right: auto;
 	margin-left: auto;
 	background-color: rgba(62,78,78,0.5);
-	
 }
 #sbgame{
+	margin-left: 80px;
+	text-align: left;
+}
+
+.link{
+	width: 800px;
+	margin-top: 20px;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: rgba(62,78,78,0.5);
+}
+#link{
 	margin-left: 80px;
 	text-align: left;
 }
