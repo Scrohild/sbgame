@@ -5,6 +5,9 @@
 		<title>金澎蹦迪室</title>
 		<style type="text/css">
 			body{
+				margin-left: auto;
+				margin-right: auto;
+				width: 800px;
 				text-align: center;
 				background-color: #225555;
 			}
@@ -18,6 +21,12 @@
 				width: 200px;
 				height: 30px;
 			}
+			#d{
+				width: 300px;
+				height: 300px;
+				margin-left: 250px;
+				margin-top: 80px;
+			}
 		</style>
 	</head>
 	<body>
@@ -26,22 +35,38 @@
 			window.alert("本网站概不负责");
 			window.alert("请确认音量在可接受范围");
 			
-			//背景变色
-			var k=0
-			function color() {
+			//视觉效果
+			var k=0;
+			var h=0;
+			function vision() {
 				k++;
 				function sleep(ms) {
 					return new Promise(resolve => setTimeout(resolve, ms));
 				}
 				async function demo() {
 					while(k%2==1){
-					await sleep(150);
-
-					var r =  parseFloat(Math.random()*255);
-					var g =  parseFloat(Math.random()*255);
-					var b =  parseFloat(Math.random()*255);
-				
-					document.body.style.backgroundColor= "rgb("+r+", "+g+", "+b+")";
+						await sleep(40);
+						h++;
+						//灯光
+						if(h%4==0){
+							var r =  parseFloat(Math.random()*255);
+							var g =  parseFloat(Math.random()*255);
+							var b =  parseFloat(Math.random()*255);
+					
+							document.body.style.backgroundColor= "rgb("+r+", "+g+", "+b+")";
+							
+						}
+						//移动
+						var x = 250;
+						var y = 80;
+						var dx = parseFloat(Math.random()*40) - 20;
+						var dy = parseFloat(Math.random()*40) - 20;
+						
+						x+=dx;
+						y+=dy;
+					
+						document.getElementById("d").style.marginLeft= x + "px";
+						document.getElementById("d").style.marginTop= y + "px";
 					}
 				}
 				demo();
@@ -69,6 +94,10 @@
 		<h1>金澎蹦迪室</h1>
 		<button id="b"; onclick="change()">换一首</button>
 		<br /><br /><br />
-		<button id="c"; onclick="color()">灯光效果</button>
+		<button id="c"; onclick="vision()">视觉效果</button>
+		<br />
+		<div id="d">
+			<img src="./jp.png"; width="220px"; height="220px" />
+		</div>
 	</body>
 </html>
