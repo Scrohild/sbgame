@@ -2,13 +2,13 @@ body{
 	width: 1000px;
 	margin-right: auto;
 	margin-left: auto;
-	background-color: #393939;
+	background-color: #0d54c7;
 }
-h1, h2, h3, h4, h5, p{
-	color: #297cac;
+h1, h2, h3, h4, h5, p:hover, :active{
+	color: #41d572;
 }
-a:link, :visited, :hover ,:active{
-	color:#0044aa;
+a:link, :visited{
+	color:#f125ff;
 	text-decoration: none;
 }
 
@@ -25,13 +25,13 @@ a:link, :visited, :hover ,:active{
 	border: 1px solid #00aaff;
 	width: 200px;
 	height: 20px;
-	color: rgba(0,0,200,0.5);
+	color: #41d572;
 	background-color: rgba(0,0,0,0);
 }
 .music div{
 	float: left;
 	width: 600px;
-	color: #00aaff;
+	color: #41d572;
 }
 
 .title{
@@ -67,6 +67,7 @@ a:link, :visited, :hover ,:active{
 #sbgame{
 	margin-left: 80px;
 	text-align: left;
+	color: #41d572;
 }
 
 .link{
