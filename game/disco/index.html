@@ -27,6 +27,9 @@
 				margin-left: 250px;
 				margin-top: 80px;
 			}
+			pic{
+				transform: rotate(0deg);
+			}
 		</style>
 	</head>
 	<body>
@@ -46,12 +49,12 @@
 				async function demo() {
 					while(k%2==1){
 						await sleep(40);
-						h++;
 						//灯光
+						h++;
 						if(h%4==0){
-							var r =  parseFloat(Math.random()*255);
-							var g =  parseFloat(Math.random()*255);
-							var b =  parseFloat(Math.random()*255);
+							var r =  Math.trunc(Math.random()*255);
+							var g =  Math.trunc(Math.random()*255);
+							var b =  Math.trunc(Math.random()*255);
 					
 							document.body.style.backgroundColor= "rgb("+r+", "+g+", "+b+")";
 							
@@ -59,14 +62,20 @@
 						//移动
 						var x = 250;
 						var y = 80;
-						var dx = parseFloat(Math.random()*40) - 20;
-						var dy = parseFloat(Math.random()*40) - 20;
+						var dx = Math.trunc(Math.random()*40) - 20;
+						var dy = Math.trunc(Math.random()*40) - 20;
 						
 						x+=dx;
 						y+=dy;
 					
 						document.getElementById("d").style.marginLeft= x + "px";
 						document.getElementById("d").style.marginTop= y + "px";
+						
+						//旋转
+						if(h%5==0){
+							var deg = Math.trunc(Math.random()*4);
+							document.getElementById("pic").style.transform=  "rotate(" + deg*90 + "deg)";;
+						}
 					}
 				}
 				demo();
@@ -97,7 +106,7 @@
 		<button id="c"; onclick="vision()">视觉效果</button>
 		<br />
 		<div id="d">
-			<img src="./jp.png"; width="220px"; height="220px" />
+			<img id="pic" src="./jp.png"; width="220px"; height="220px" />
 		</div>
 	</body>
 </html>
